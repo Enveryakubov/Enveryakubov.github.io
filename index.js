@@ -54,9 +54,11 @@ input.addEventListener("keyup", function(e){
             }
             else if (textValue === "yes" || textValue === "y"){
                 banner.remove()
+                displayTheFinalNote("Please, REFRESH the page to start over!")
             }
             else if (textValue === "no" || textValue === "n"){
                 banner.remove()
+                displayTheFinalNote("Please, REFRESH the page to start over!")
             }
             else if (textValue === "clear"){
                 promptMessageBox.innerHTML = ""
@@ -80,7 +82,7 @@ input.addEventListener('blur', () => {
   }, true);
 
 
-const displayTheFinalNote = (text) => {
+function displayTheFinalNote(text){
     const body = document.querySelector("body")
     body.style.display = "flex"
     body.style.height = "100vh"
